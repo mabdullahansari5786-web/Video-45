@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition</title>
+</head>
+<style>
+    .container{
+        background-color: aqua;
+        height: 50vh;
+        width: 50vw;
+    }
+
+    .box{
+        background-color: bisque;
+        height: 5vh;
+        width: 4vw;
+        /* Transition Property ka matlab hai ke kis property ke uper lage gi transition. */
+
+        /* agar main transition property transform kar dun to ye jahan main ne transform property apply ki ho gi wahan lag jaye ga. */
+
+        /* transition-property: transform; */
+
+        /* agar main transition property mein all likhun to wo sab par apply ho jaye ga. */
+
+        /* transition-property: all; */
+
+        /* agar mai chahun ke zayada properties par transition chahiye to multiples bhi likh sakte hai. matlab ke sirf kuch properties par hi lagana chahte hain to multiple properties ko lilkh sakte hai. */
+
+        /* transition-property: background-color, transform; */
+
+        /* Transition Duration ka matlab haike transition kitni dair chale gi yahan jis box par lagai hai use apni doosri jo hum ne position set ki hai wahan tak jane mein 4s lagein ge. */
+        /* transition-duration: 3s; */
+
+        /* Transition Timing Function ka matlab hai ke transition kis tarhan ho gi ya han ease in out ka matlab hai ke jab transition chale yani in ho ayei to bhi ho aur jab transition band karei to bhi ho. */
+
+        /* hum tranition timing function ko khud bhi bana sakte hain jaise ke browser mein inset kar ke wahan hum timing property ko check karein ge aur hum jaise chahein use bana sakte hain maslan hum ease in out ke sath us jo timing ka icon nazar aye ga us par click karein ge to humein pata chal jaye ga ke ye kis tarhan travel kar raha hai hum use khanch kar teez ya halka bhi kar sakte hai ya shuru mein taiz aur age halka. aur phir baad mein use neeche se copy kar ke add kar dein. Aap deikh sakte hai main ne neeche aik lagai hai.*/
+
+        /* transition-timing-function: ease-in-out; */
+        /* transition-timing-function: cubic-bezier(1, 0.3, 0.41, 1); */
+
+        /* Transition Delay ka matlab hai ke transition kitni deer bad chale gi yahn transition 1s ke baad chale gi. */
+        /* transition-delay: 1s; */
+
+        /* In sab ko likhne ki bajaye hum shirt hand bhi use kar sakte hai yani hum sirf transition likh kar usi mein hi in sab ko laga sakte hai. */
+
+        transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;
+
+    }
+
+    .translate{
+        transform: translateX(10vw) translateY(10vh) scale(2);
+        background-color: blue;
+    }
+
+    /* Kabhi Transition ko isi tarhan na samjho is ko is ki Four Properties ke sath samjho. There are Four Types of Transition Properties are as:
+
+    1.transition-property
+    2.transitioin-duration
+    3.transition-timing-function
+    4.transition-delay */
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+</body>
+</html>
